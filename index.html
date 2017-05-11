@@ -9,37 +9,31 @@
   <main class="container-fluid">
     <section class="row text-center">
       <form class="name-and-search col-md-8 col-md-offset-2">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-lg-6 col-lg-offset-3">
           <h1>Search Youtube Videos!*</h1>
           <p class="text-right">*somehow better than Youtube's own search function</p>
+        </br>
         </div>
-        <div class="form-group text-left">
+        <div class="form-search text-left">
           <input type="text" class="form-control" id="search" placeholder="Type to somehow search better than Youtube">
+          <button type="submit" class="btn btn-default pull-right btn-xs submit-button">Go, baby, go!</button>
         </div>
       </form>
     </section>
-    <section class="row">
+    <section class="row results"></section>
+    <div class="template hidden">
       <div class="col-md-4">
         <div class="video-wrapper">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/p5Vsg1CrhrI" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/p5Vsg1CrhrI" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/p5Vsg1CrhrI" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
-    </section>
+    </div>
   </main>
 
 
 
   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.1/axios.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script type="text/javascript" src="app.js"></script>
 </body>
