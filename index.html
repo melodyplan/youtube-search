@@ -15,7 +15,7 @@
         </br>
         </div>
         <div class="form-search text-left">
-          <input type="text" class="form-control" id="search" placeholder="Type to somehow search better than Youtube">
+          <input type="text" class="form-control" name="melodys-query" id="search" placeholder="Type to somehow search better than Youtube">
           <button type="submit" class="btn btn-default pull-right btn-xs submit-button">Go, baby, go!</button>
         </div>
       </form>
@@ -24,8 +24,15 @@
     <div class="template hidden">
       <div class="col-md-4">
         <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/p5Vsg1CrhrI" frameborder="0" allowfullscreen></iframe>
+          <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/p5Vsg1CrhrI" frameborder="0" allowfullscreen></iframe> -->
+          <!-- put image tag here with fake image src , in code replace img src with thubmnail-->
+          <!-- <img src="http://lorempixel.com/560/315/" alt=""> -->
         </div>
+      </div>
+    </div>
+    <div class="melody-overlay">
+      <div class="melody-modal">
+        <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/p5Vsg1CrhrI" width="560" height="315" frameborder="0" allowfullscreen autoplay></iframe></div>
       </div>
     </div>
   </main>

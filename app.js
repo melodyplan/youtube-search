@@ -15,6 +15,7 @@ function displayYoutubeSearchData(response) {
   var videos = response.data.items.map(function (item) {
     var videoEl = $('.template > div').clone()
     videoEl.find('iframe').attr('src', `https://www.youtube.com/embed/${item.id.videoId}`)
+    // videoEl.find('img').attr('src', item.snippet.thumbnails.high.url)
     return videoEl
   })
   // console.log(videos)
