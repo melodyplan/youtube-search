@@ -26,7 +26,7 @@
         <div class="video-wrapper">
           <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/p5Vsg1CrhrI" frameborder="0" allowfullscreen></iframe> -->
           <!-- put image tag here with fake image src , in code replace img src with thubmnail-->
-          <!-- <img src="http://lorempixel.com/560/315/" alt=""> -->
+          <img src="http://lorempixel.com/560/315/" alt="">
         </div>
       </div>
     </div>
@@ -35,6 +35,11 @@
         <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/p5Vsg1CrhrI" width="560" height="315" frameborder="0" allowfullscreen autoplay></iframe></div>
       </div>
     </div>
+    <!-- in theory, i should be able to use hidden or disabled here but all variations of
+    hidden (hidden-md, hidden-lg, etc) and disabled weren't working on the divs. So i
+    went into the css file and added visibility: collapse so the page will ignore this
+    div class and function as usual, but i'm not sure how to hook things though
+    css to JS -->
   </main>
 
 

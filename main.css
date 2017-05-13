@@ -26,6 +26,7 @@ h1, p {
 }
 
 .melody-modal {
+  visibility: collapse;
   width: 80%;
   padding: 10px;
   background-color: darkgray;
@@ -33,6 +34,7 @@ h1, p {
 }
 
 .melody-overlay {
+  visibility: collapse;
   position: fixed;
   top: 0;
   left: 0;
