@@ -14,19 +14,32 @@ function getDataFromApi(query) {
 function displayYoutubeSearchData(response) {
   var videos = response.data.items.map(function (item) {
     var videoEl = $('.template > div').clone()
-    videoEl.find('iframe').attr('src', `https://www.youtube.com/embed/${item.id.videoId}`)
+    // videoEl.find('iframe').attr('src', `https://www.youtube.com/embed/${item.id.videoId}`)
     videoEl.find('img').attr('src', item.snippet.thumbnails.high.url)
+      .attr('data-video', item.id.videoId)
     return videoEl
   })
   // console.log(videos)
  $('.results').html(videos)
 
-//  $('#image-thumbnail').on('click', function() {
-//     //  $('.melody-modal').removeClass('hidden')
-//     //  $('.melody-overlay').removeClass('hidden')
-//     $('.melody-modal').show()
-//     $('.melody-overlay').show()
-// }
+}
+
+function thumbnailClickHandler() {
+  $('.results').on('click', '.image-thumbnail', function() {
+    var videoId = $(this).data('video')
+    $('.melody-overlay').find('iframe').attr('src', `https://www.youtube.com/embed/${videoId}?version=3&enablejsapi=1`)
+    $('.melody-overlay').removeClass('hidden')
+
+  })
+}
+
+function overlayClickHandler() {
+  $('.melody-overlay').on('click', function() {
+    $('.melody-overlay').addClass('hidden')
+    var videoSource = $('.melody-overlay').find('iframe').attr('src')
+    $('.melody-overlay').find('iframe').attr('src', videoSource)
+  })
+}
 
 function watchSubmit() {
   $('.name-and-search').submit(function(event) {
@@ -38,6 +51,8 @@ function watchSubmit() {
 
 $(function() {
   watchSubmit();
+  thumbnailClickHandler();
+  overlayClickHandler();
 });
 
 // $(document).ready(function() {
