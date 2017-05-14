@@ -20,7 +20,13 @@ function displayYoutubeSearchData(response) {
   })
   // console.log(videos)
  $('.results').html(videos)
-}
+
+//  $('#image-thumbnail').on('click', function() {
+//     //  $('.melody-modal').removeClass('hidden')
+//     //  $('.melody-overlay').removeClass('hidden')
+//     $('.melody-modal').show()
+//     $('.melody-overlay').show()
+// }
 
 function watchSubmit() {
   $('.name-and-search').submit(function(event) {
@@ -30,4 +36,10 @@ function watchSubmit() {
   });
 }
 
-$(function(){watchSubmit();});
+$(function() {
+  watchSubmit();
+});
+
+// $(document).ready(function() {
+//     watchSubmit();
+// })
